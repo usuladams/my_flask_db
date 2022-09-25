@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/ec2-user/flask-db/email.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/ec2-user/my_flask_db/flask-db/email.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
