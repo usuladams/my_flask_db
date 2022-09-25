@@ -3,7 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/usuls/Desktop/flask_tutorial/flask-db/email.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/ec2-user/flask-db/email.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -48,4 +49,4 @@ def deleteuser(id):
     
 
 if __name__ == "__main__":
-    app.run(debug=True,port=2000)
+    app.run(debug=True,port=80)
